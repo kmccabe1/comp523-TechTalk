@@ -1,8 +1,9 @@
 import click
 
+
 @click.command()
 # Options can be given default values and custom help messages.
-@click.option("--count", "-c", default=1, help="Number of goodbyes.")
+@click.option("-c", "--count", default=1, help="Number of goodbyes.")
 # Prompt will ask the user for input for the option.
 @click.option("--name", prompt="Your name", help="The person to say goodbye to.")
 def say_goodbye(count, name):
@@ -12,6 +13,5 @@ def say_goodbye(count, name):
         click.echo(f"Goodbye {name}.")
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     say_goodbye()
-
